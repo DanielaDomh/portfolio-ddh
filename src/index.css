@@ -102,7 +102,7 @@ button {
   box-shadow: 0px 0px 0px 4px rgba(242, 5, 116, 0.3);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .bg {
     display: flex;
     flex-direction: column;
