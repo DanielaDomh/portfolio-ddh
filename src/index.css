@@ -1,15 +1,31 @@
-* {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
+  color: white;
 }
 
 :root {
-  --small-size: 1rem;
-  --medium-size: 1.5rem;
+  --max-size: 6rem;
   --big-size: 2rem;
+  --medium-size: 1.5rem;
+  --normal-size: 1.25rem;
+  --small-size: 1rem;
+  --bold-font: 700;
+  --button-size: 50rem;
+}
+
+@media screen and (min-width: 992px) {
+  :root {
+    --big-size: 2.5rem;
+    --medium-size: 2rem;
+    --normal-size: 1.25rem;
+    --small-size: 1rem;
+  }
 }
 
 li {
@@ -21,38 +37,40 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: grey;
+  filter: drop-shadow(0 0 20px #db3eb1) contrast(3) brightness(3);
+}
+
+h1 {
+  font-size: 15rem;
+  margin-bottom: 5%;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 5px solid #e975ab;
+  border-radius: 50px;
 }
 
 .bg {
   position: absolute;
   width: 100vw;
-  height: auto;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  font-size: 2.5rem;
   background: radial-gradient(#a6037a, #a6037a, #f25d27, #f20574);
   background-size: 400% 300%;
   animation: BgGradient 7s linear infinite;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
 .card-presentation {
-  text-align: center;
-  margin: 20rem 5rem;
-  width: 70rem;
-  height: 10rem;
-  border-radius: 20px;
-  color: white;
-  font-weight: 700;
-  font-size: 6rem;
-  z-index: 3;
-}
-
-p:nth-child(1) {
-  font-weight: 100;
-  margin-top: 1.5rem;
-  font-size: 1.75rem;
+  position: relative;
+  font-size: var(--max-size);
+  text-align: end;
+  margin: 10% 5%;
+  padding: 15% 0;
+  z-index: 1;
+  text-shadow: #00000057 1px 0 50px;
 }
 
 .element {
@@ -60,7 +78,7 @@ p:nth-child(1) {
   position: absolute;
   top: 15%;
   left: 10%;
-  z-index: 1;
+  z-index: 0;
 }
 
 @keyframes BgGradient {
@@ -79,71 +97,97 @@ p:nth-child(1) {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 1.7rem;
+  font-size: 4rem;
   width: 100%;
   height: 15%;
   background: linear-gradient(rgba(0, 0, 255, 0.8), rgba(0, 0, 0, 0));
   display: flex;
-  gap: 1.5rem;
+  gap: 3%;
   justify-content: end;
-  padding: 2rem;
-  z-index: 0;
+  padding: 5rem;
 }
 
-button {
-  border: 2px solid #e975ab;
-  background-color: transparent;
-  padding: 1rem;
-  margin: 1rem;
-  border-radius: 50px;
-  width: 15rem;
-  color: white;
-  font-size: 1.5rem;
-  box-shadow: 0px 0px 0px 4px rgba(242, 5, 116, 0.3);
+.button-link,
+.button-git {
+  padding: 1.5rem;
+  margin: 5% 5% 0 0;
+  font-size: var(--max-size);
+  width: var(--button-size);
+  filter: drop-shadow(0 0 20px #db3eb1) contrast(2) brightness(2);
+  letter-spacing: 5px;
+}
+.button-link:hover,
+.button-git:hover {
+  filter: drop-shadow(0 0 20px #db3eb1) drop-shadow(0 0 10px #db3eb1)
+    contrast(1) brightness(2);
+  background-color: #a6037a;
 }
 
-@media screen and (max-width: 767px) {
+/* Responsive */
+@media (min-width: 1024px) {
+  .section--title,
+  .container {
+    margin: 0 auto;
+  }
+}
+
+
+@media screen and (max-width: 767px) { 
+  h1 {
+    font-size: var(--max-size);
+    text-align: center;
+    margin-top: 20%;
+  }
+  
+  .card-presentation {
+    font-size: var(--medium-size);
+    text-align: center;
+    width: 80%;
+    position: relative;
+    top: 50%;
+    left: 7%;
+  }
+
   .bg {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
     width: 100vw;
+    height: auto;
   }
 
   .navBar {
-    font-size: var(--small-size);
-    gap: var(--small-size);
+    font-size: var(--medium-size);
+    gap: 0 10%;
     justify-content: center;
-  }
-
-  .card-presentation {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    width: 450px;
   }
 
   .element {
-    width: 10rem;
     position: absolute;
-    top: 7%;
+    width: 15rem;
+    top: 15%;
+    left: 10%;
+    transform: rotate(15deg);
   }
 
-  button {
+  .button-link,
+  .button-git {
     width: 10rem;
-    font-size: var(--medium-size);
+    font-size: var(--small-size);
     height: 3.5rem;
     text-align: center;
     padding: 0.25rem 0.5rem;
+    margin-top: 5rem;
   }
 
-  p {
-    margin: 3rem;
+  
+  /*  .bg {
+  p:nth-child(1) {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 10px rgb(0, 0, 0, 0.5);
   }
 
-  p:nth-child(3) {
+  p:nth-child(2) {
     font-weight: 100;
     font-size: var(--medium-size);
-  }
+    margin-top: 2rem;
+  } */
 }

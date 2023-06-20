@@ -5,17 +5,30 @@ const Home = () => {
     <div>
       <section>
         <article id="home">
+          <img className="element" src="3delement.png" alt="" />
           <div className="card-presentation">
-            <img className="element" src="3delement.png" alt="" />
-            <p>Hola! 👋🏻 Soy Daniela Domínguez</p>
+            <h1>Hola! 👋🏻 Soy Daniela Domínguez</h1>
             <p>Desarrolladora Web Full Stack especializado en Front End</p>
-            <button>Linkedln</button>
-            <button>Github</button>
+            <div>
+              <a href="https://www.linkedin.com/in/daniela-hern%C3%A1ndez-b96550210/" target="_blank">
+                <button className="button-link">Linkedln</button>
+              </a>
+              <a href="https://github.com/DanielaDomh" target="_blank">
+              <button className="button-git">Github</button>
+              </a>
+            </div>
           </div>
-<br /> <br /><br /><br /><br /><br /><br /><br /><br />
         </article>
         <article id="aboutMe">
-          <p>Sobre Mi</p>
+          <div>
+            <p>Sobre Mi</p>
+            <p>
+              Hola mi nombre es Daniela, tengo 22 años y soy Web Developer con
+              una alta capacidad de adaptabilidad y aprendizaje, me encantan los
+              retos y manteniendo mis conocimientos en constante actualización
+              ofrezco soluciones efectivas a problemas del día a día.
+            </p>
+          </div>
         </article>
         <article id="proyects">
           <p>Proyectos</p>
