@@ -5,15 +5,12 @@ const Home = () => {
     <div>
       <section>
         <article id="home">
-          <img className="element" src="3delement.png" alt="" />
           <div className="card-presentation">
             <h1>Hola! 👋🏻 Soy Daniela Domínguez</h1>
-            <p>Desarrolladora Web Full Stack especializado en Front End</p>
+            <p>Desarrolladora Web Full Stack</p>
             <div>
-              <a
-                href="https://www.linkedin.com/in/daniela-hern%C3%A1ndez-b96550210/"
-                target="_blank"
-              >
+              <a href="https://www.linkedin.com/in/daniela-hern%C3%A1ndez-b96550210/"
+                target="_blank" >
                 <button className="button-link">Linkedln</button>
               </a>
               <a href="https://github.com/DanielaDomh" target="_blank">
@@ -26,41 +23,47 @@ const Home = () => {
           <h2>Sobre Mi</h2>
           <div className="about-me">
             <p>
-              Hola! mi nombre es Daniela, tengo 22 años y soy Web Developer
-              mexicana con una alta capacidad de adaptabilidad y aprendizaje, me
-              encantan los retos y manteniendo mis conocimientos en constante
-              actualización ofrezco soluciones efectivas a problemas del día a
-              día en la industria.
+              ¡Hola! Soy Dani, tengo 22 años y soy Web Developer mexicana con
+              una alta capacidad de adaptabilidad y aprendizaje, me encantan los
+              retos, los puzzles y los rompecabezas. Descubrí mi pasión por el
+              diseño y la programación así que me encuentro constantemente
+              aprendiendo cosas nuevas dentro de la industria.
             </p>
-            <div className="container-icon">
-              <div className="card__wrap">
-              <div className="card">
-              <p className="icon__html">HTML</p>
-              </div>
-              </div>
-              <div className="card">
-              </div>
-              <div className="card">
-              <p className="icon__css">CSS</p>
-              </div>
-              <div className="card">
-              <p className="icon__js">Javascript</p>
-              <img src="JS-icon.png" alt="" />
-              </div>
-              <div className="card">
-              <p className="icon__bs">Bootstrap</p>
-              </div>
-              <div className="card">
-              <p className="icon__rs">React JS</p>
-              </div>
-            </div>
           </div>
+          <div className="container-icon">
+              <p>JAVASCRIPT (ES6+)</p>
+              <p>React</p>
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>Bootstrap</p>
+              <p>Node JS</p>
+              <p>Express</p>
+              <p>PostGress</p>
+              <p>Git</p>
+              <p>GituHub</p>
+        </div>
+            <button>Descargar CV</button>
         </article>
         <article id="proyects">
-          <h2>Proyectos</h2>
+          <h2>Algunos proyectos</h2>
+          <a href="https://github.com/DanielaDomh?tab=repositories"
+            target="_blank" >
+            <button className="button-git">Github</button>
+          </a>
         </article>
         <article id="contact">
-          <h2>Contacto</h2>
+          <h2>Pongamonos en contacto!</h2>
+          <p>Correo</p>
+          <p>danieladoher@gmail.com</p>
+          <form action="">
+            <label htmlFor="" />
+            <input type="text" placeholder="Nombre" />
+            <label htmlFor="" />
+            <input type="text" placeholder="Email" />
+            <label htmlFor="" />
+            <input type="text" placeholder="Mensaje" />
+            <button>Enviar</button>
+          </form>
         </article>
       </section>
     </div>
