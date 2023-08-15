@@ -2,7 +2,7 @@ import React from "react";
 
 const NavBar = () => {
   return (
-      <div>
+      <div className="navBar-section">
         <ul className="navBar">
           <li>
             <a href="#home">Inicio</a>
