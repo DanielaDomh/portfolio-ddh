@@ -2,7 +2,6 @@ import React from "react";
 
 const NavBar = () => {
   return (
-      <div className="navBar-section">
         <ul className="navBar">
           <li>
             <a href="#home">Inicio</a>
@@ -17,7 +16,6 @@ const NavBar = () => {
             <a href="#contact">Contacto</a>
           </li>
         </ul>
-      </div>
   );
 };
 
