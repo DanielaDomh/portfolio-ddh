@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 const Presentation = () => {
   return (
       <div className="card-presentation">
-        <div>
+        <div >
           <Typewriter
             options={{
               strings: ["Hola! ", "Hi! ", "Aloha! ", "Bonjour! "],

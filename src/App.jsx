@@ -1,22 +1,35 @@
 import "./App.css";
-import NavBar from "./components/NavBar";
+import { useEffect } from "react";
+import ScrollMagic from 'scrollmagic'
 import Technologies from "./components/Technologies";
 import Presentation from "./components/Presentation";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import MenuPlegable from "./components/MenuPlegable";
 
 function App() {
+  useEffect(() => {
+    const controller = new ScrollMagic.Controller();
+    new ScrollMagic.Scene({
+      triggerElement: '.animated-element',
+      offset: -400 // start this scene after scrolling for 100px
+    })
+    .setClassToggle('.animated-element', 'show')
+    .addTo(controller);
+  }, []);
+
   return (
-    <div>
+    <div className="background">
+ 
+        <MenuPlegable/>
       <section>
-          <article>
-            <NavBar/>
-          </article>
           <article id="home"> 
-            <Presentation/>
+            <Presentation />
           </article>
+      </section>
+      <section>
         <article id="aboutMe" className="aboutme">
-          <h2>Sobre Mi</h2>
+          <h2 className="animated-element">Sobre Mi</h2>
             <div className="about-me">
               <p>
                 ¡Hola! Soy Dani, tengo 22 años y soy Web Developer mexicana con

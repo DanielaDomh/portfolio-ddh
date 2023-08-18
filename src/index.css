@@ -6,10 +6,15 @@
 }
 
 :root {
-  --bg-color: #232946;
+  --bg-color: #07020D;
+  --title-color: #F4F4ED;
+  --body-color: #53A2BE;
+  /* --button-color: #53A2BE; */
+  --button-color: #E4572E;
+  /* --bg-color: #232946;
   --title-color: #fffffe;
   --body-color: #b8c1ec;
-  --button-color: #eebbc3;
+  --button-color: #eebbc3; */
   --title-size: 3em;
   --big-size: 2.5em;
   --medium-size: 1.5em;
@@ -38,6 +43,7 @@ body {
   background-color: var(--bg-color);
 }
 
+
 ul,
 li,
 a {
@@ -61,7 +67,7 @@ button {
     color: var(--title-color);
     border-radius: 20px;
     padding: 1em;
-    background-color: transparent;
+    background-color: var(--bg-color);
     margin: 0.5em;
     font-size: 1.25em;
     cursor: pointer;
@@ -73,7 +79,9 @@ button:hover{
   transform: scale(1.1)
 }
 
-.navBar {
+/* .navBar {
+  position: sticky;
+  top: 0px;
   padding: 0.5em;
   margin: 3em 2em;
   background-color: var(--button-color);
@@ -86,15 +94,24 @@ button:hover{
   justify-content: center;
   align-items: center;
   gap: 0.25em;
-}
+  z-index: 4;
+} */
 
 li:hover {
   transform: scale(1.1)
 }
 
+.background{
+  background-image: url("../public/bg2.gif");
+  background-size:auto;
+} 
+
 .Typewriter__wrapper, .Typewriter__cursor{
-  font-size: 3.5em;
+  font-size: 4em;
   font-weight: var(--font-bold);
+  background-color: var(--bg-color);
+  color: var(--title-color);
+  /* text-decoration: underline var(--button-color) 5px; */
 }
 
 .Typewriter__cursor{
@@ -102,7 +119,7 @@ li:hover {
 }
 
 .card-presentation{
-    margin: 4em 2em 10em;
+    margin: 5em 2em 10em;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -115,19 +132,24 @@ li:hover {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center; 
+
+}
+
+.card-presentation h1{
+  color: var(--title-color);
+  line-height: var(--normal-size);
+  margin: 0.5em 0;
+}
+
+section:nth-child(3){
+  background-color: #000000;
+  padding-top: 0.5em;
 }
 
 .developer{
   font-size: var(--medium-size);
   line-height: var(--normal-size);
 }
-
-/* article{
-  display: flex;
-  flex-flow:wrap;
-  justify-content: center;
-  align-items: center;
-} */
 
 .aboutme{
   display: flex;
@@ -287,6 +309,7 @@ li:hover {
   text-decoration-thickness: 0.30em;
 }
 
+
 .project-box a {
   display: flex;
   flex-flow: wrap;
@@ -294,7 +317,8 @@ li:hover {
   color: var(--title-color);
   border-radius: 20px;
   padding: 0 1em;
-  background-color: transparent;
+  background-color: var(--bg-color);
+
   font-size: var(--normal-size);
   cursor: pointer;
   z-index: 4;
@@ -312,4 +336,58 @@ li:hover {
       flex-flow: column;
       justify-content: center;
       align-items: center;
+}
+
+/* Estilos para DropdownMenu.js */
+.navBar{
+ position: sticky;
+ top: 10px;
+ z-index: 5;
+}
+
+.dropdown-button {
+  position: sticky;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-list {
+  position: absolute;
+  display: flex;
+  flex-flow: column wrap;
+  top: 100%;
+  left: 0;
+  width: 90%;
+  height: 50em;
+  background-color: var(--bg-color);
+}
+
+.dropdown-list a{
+  color: var(--title-color);
+}
+
+.dropdown-list li {
+  cursor: pointer;
+}
+
+input {
+  border: #E4572E solid 0.25em;
+  padding: var(--normal-size) 5em;
+  margin: 0.5em;
+  border-radius: 20px;
+  text-align: center;
+  background-color: rgba(63, 63, 63, 0.493);
+}
+
+.animated-element {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animated-element.show {
+  opacity: 1;
+  transform: translateY(0);
 }

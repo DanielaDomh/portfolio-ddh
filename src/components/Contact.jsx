@@ -15,7 +15,7 @@ const Contact = () => {
             <input type="text" placeholder="Email" />
             <label htmlFor="" />
             <input type="text" placeholder="Mensaje" />
-            <button>Enviar</button>
+            <button>Enviar <box-icon name='mail-send' color='#ffffff'/></button>
           </form>
         </article>
         </section>
