@@ -40,7 +40,7 @@ function App() {
               </p>
             </div>
           <Technologies/>
-          <a href="./public/CV_Daniela_Domínguez.pdf" download={"CV_Daniela_Domínguez.pdf"}>
+          <a href="public/CV_Daniela_Domínguez.pdf" download={"CV_Daniela_Domínguez.pdf"}>
             <button>Descargar CV</button>
           </a>
         </article>
