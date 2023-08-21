@@ -8,6 +8,10 @@ const MenuPlegable = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <div className="navBar">
       <div className="profile">
@@ -36,16 +40,16 @@ const MenuPlegable = () => {
       {isMenuOpen && (
         <ul className="dropdown-list">
           <li>
-            <a href="#home">Inicio</a>
+            <a href="#home" onClick={closeMenu}>Inicio</a>
           </li>
           <li>
-            <a href="#aboutMe">Sobre Mi</a>
+            <a href="#aboutMe" onClick={closeMenu}>Sobre Mi</a>
           </li>
           <li>
-            <a href="#proyects">Proyectos</a>
+            <a href="#proyects" onClick={closeMenu}>Proyectos</a>
           </li>
           <li>
-            <a href="#contact">Contacto</a>
+            <a href="#contact" onClick={closeMenu}>Contacto</a>
           </li>
         </ul>
       )}
