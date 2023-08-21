@@ -20,13 +20,13 @@ const Presentation = () => {
             href="https://www.linkedin.com/in/daniela-hern%C3%A1ndez-b96550210/"
             target="_blank"
           >
-            <button className="button-link">Linkedln</button>
+            <button>Linkedln</button>
           </a>
           <a href="https://github.com/DanielaDomh" target="_blank">
-            <button className="button-git">Github</button>
+            <button>Github</button>
           </a>
           <a
-            href="./public/CV_Daniela_Domínguez.pdf"
+            href="CV_Daniela_Domínguez.pdf"
             download={"CV_Daniela_Domínguez.pdf"}
           >
             <button>Descargar CV</button>
